@@ -221,3 +221,8 @@ You have to delete any edited configuration files manually.
 
     Continue to Post-installation steps for Linux.
     Review the topics in Develop with Docker to learn how to build new applications using Docker.
+
+> This is a copy of the original edited by me
+>
+> [origin link]( https://docs.docker.com/engine/install/debian/)
+>
