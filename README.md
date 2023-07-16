@@ -1,3 +1,32 @@
+## Descrição:
+<br>
+Olá a todos!
+
+Gostaria de compartilhar com vocês o meu projeto "app_docker", que também é conhecido como "shadowruge/flsck_pages" no DockerHub. [link](https://hub.docker.com/repository/docker/shadowruge/flask_pages/general)
+
+ Trata-se de uma imagem Docker altamente versátil e eficiente, projetada para simplificar o processo de desenvolvimento e implantação de aplicações Flask.
+
+Recursos e Benefícios:
+
+Construção Rápida: 
+A imagem "app_docker" é otimizada para uma construção rápida e eficiente, ajudando a acelerar o ciclo de desenvolvimento.
+    
+Leve e Compacta:
+Com um tamanho de imagem reduzido, o "app_docker" é ideal para ambientes em nuvem e implantações rápidas.
+    
+Compatibilidade e Flexibilidade: 
+O projeto é altamente compatível com uma ampla gama de tecnologias e frameworks populares, permitindo que você use suas ferramentas favoritas sem restrições.
+    
+Documentação Detalhada:
+Ajude a construir nossa documentação.
+
+ Suporte Ativo:
+ Estou empenhado em fornecer suporte contínuo aos usuários do projeto, ajudando a solucionar dúvidas e fornecendo orientações.
+
+Obrigado a todos(as qia+).
+
+
+
 ## Visão Geral da Imagem Docker: `flask_pages`
 
 A imagem Docker `flask_pages` é uma imagem personalizada baseada no Python 3.9 que contém um aplicativo Flask pré-configurado. Essa imagem foi projetada para facilitar o desenvolvimento e a execução de aplicativos web utilizando o framework Flask.
