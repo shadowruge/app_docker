@@ -8,12 +8,11 @@ Prerequisites
 >
 > If you use ufw or firewalld to manage firewall settings, be aware that when you expose container ports using Docker, these ports bypass your firewall rules. For more information, refer to Docker and ufw.
 
-
 ## OS requirements
 
 > To install Docker Engine, you need the 64-bit version of one of these Debian versions:
->     Debian Bookworm 12 (stable)
->     Debian Bullseye 11 (oldstable)
+> Debian Bookworm 12 (stable)
+> Debian Bullseye 11 (oldstable)
 
 Docker Engine for Debian is compatible with x86_64 (or amd64), armhf, and arm64 architectures.
 
@@ -44,13 +43,11 @@ Images, containers, volumes, and networks stored in /var/lib/docker/ aren’t au
 
 You can install Docker Engine in different ways, depending on your needs:
 
-    Docker Engine comes bundled with Docker Desktop for Linux. This is the easiest and quickest way to get started.
+Docker Engine comes bundled with Docker Desktop for Linux. This is the easiest and quickest way to get started. Set up and install Docker Engine from Docker’s apt repository. 
 
-    Set up and install Docker Engine from Docker’s apt repository.
+Install it manually and manage upgrades manually.
 
-    Install it manually and manage upgrades manually.
-
-    Use a convenience scripts. Only recommended for testing and development environments.
+Use a convenience scripts. Only recommended for testing and development environments.
 
 ## Install using the apt repository
 
@@ -62,24 +59,24 @@ Before you install Docker Engine for the first time on a new host machine, you n
 
 > $ sudo apt-get update
 
->  $ sudo apt-get install ca-certificates curl gnupg
+> $ sudo apt-get install ca-certificates curl gnupg
 
 Add Docker’s official GPG key:
 
 > $ sudo install -m 0755 -d /etc/apt/keyrings
 
->  $ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+> $ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
 > $ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
 Use the following command to set up the repository:
 
->  $ echo
+> $ echo
 > "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian
 > "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" |
 > sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-> Note 
+> Note
 >
 > If you use a derivative distro, such as Kali Linux, you may need to substitute the part of this command that’s expected to print the version codename:
 >
@@ -102,14 +99,14 @@ To install the latest version, run:
 
 Verify that the Docker Engine installation is successful by running the hello-world image:
 
->  $ sudo docker run hello-world
+> $ sudo docker run hello-world
 
     This command downloads a test image and runs it in a container. When the container runs, it prints a confirmation message and exits.
 
 You have now successfully installed and started Docker Engine.
 
 > Tip
->     Receiving errors when trying to run without root?
+> Receiving errors when trying to run without root?
 >
 > The docker user group exists but contains no users, which is why you’re required to use sudo to run Docker commands. Continue to Linux postinstall to allow non-privileged users to run Docker commands and for other optional configuration steps.
 
@@ -129,10 +126,10 @@ If you can’t use Docker’s apt repository to install Docker Engine, you can d
 
     4. Download the following deb files for the Docker Engine, CLI, containerd, and Docker Compose packages:
         containerd.io_`<version>`_`<arch>`.deb
-        docker-ce_`<version>`_`<arch>`.deb
-        docker-ce-cli_`<version>`_`<arch>`.deb
-        docker-buildx-plugin_`<version>`_`<arch>`.deb
-        docker-compose-plugin_`<version>`_`<arch>`.deb
+        docker-ce_ `<version>`_`<arch>`.deb
+        docker-ce-cli_ `<version>`_`<arch>`.deb
+        docker-buildx-plugin_ `<version>`_`<arch>`.deb
+        docker-compose-plugin_ `<version>`_`<arch>`.deb
 
     5. Install the .deb packages. Update the paths in the following example to where you downloaded the Docker packages.
 
@@ -141,7 +138,6 @@ If you can’t use Docker’s apt repository to install Docker Engine, you can d
 > ./docker-ce-cli_ `<version>`_`<arch>`.deb
 > ./docker-buildx-plugin_ `<version>`_`<arch>`.deb
 > ./docker-compose-plugin_ `<version>`_`<arch>`.deb
-
 
 The Docker daemon starts automatically.
 
@@ -156,8 +152,8 @@ This command downloads a test image and runs it in a container. When the contain
 You have now successfully installed and started Docker Engine.
 
 > Tip
->     Receiving errors when trying to run without root?
->     The docker user group exists but contains no users, which is why you’re required to use sudo to run Docker commands. Continue to Linux postinstall to allow non-privileged users to run Docker commands and for other optional configuration steps.
+> Receiving errors when trying to run without root?
+> The docker user group exists but contains no users, which is why you’re required to use sudo to run Docker commands. Continue to Linux postinstall to allow non-privileged users to run Docker commands and for other optional configuration steps.
 
 ## Upgrade Docker Engine
 
@@ -178,10 +174,10 @@ Always examine scripts downloaded from the internet before running them locally.
 
 > Tip
 >
->  preview script steps before running
->     You can run the script with the --dry-run option to learn what steps the script will run when invoked:
->     $ curl -fsSL https://get.docker.com -o get-docker.sh
->     $ sudo sh ./get-docker.sh --dry-run
+> preview script steps before running
+> You can run the script with the --dry-run option to learn what steps the script will run when invoked:
+> $ curl -fsSL https://get.docker.com -o get-docker.sh
+> $ sudo sh ./get-docker.sh --dry-run
 
 This example downloads the script from https://get.docker.com/ and runs it to install the latest stable release of Docker on Linux:
 
@@ -192,8 +188,8 @@ This example downloads the script from https://get.docker.com/ and runs it to in
 
 You have now successfully installed and started Docker Engine. The docker service starts automatically on Debian based distributions. On RPM based distributions, such as CentOS, Fedora, RHEL or SLES, you need to start it manually using the appropriate systemctl or service command. As the message indicates, non-root users can’t run Docker commands by default.
 
->  Use Docker as a non-privileged user, or install in rootless mode?
->     The installation script requires root or sudo privileges to install and use Docker. If you want to grant non-root users access to Docker, refer to the post-installation steps for Linux. You can also install Docker without root privileges, or configured to run in rootless mode. For instructions on running Docker in rootless mode, refer to run the Docker daemon as a non-root user (rootless mode).
+> Use Docker as a non-privileged user, or install in rootless mode?
+> The installation script requires root or sudo privileges to install and use Docker. If you want to grant non-root users access to Docker, refer to the post-installation steps for Linux. You can also install Docker without root privileges, or configured to run in rootless mode. For instructions on running Docker in rootless mode, refer to run the Docker daemon as a non-root user (rootless mode).
 
 ## Install pre-releases
 
@@ -209,7 +205,6 @@ To install the latest version of Docker on Linux from the test channel, run:
 
 If you installed Docker using the convenience script, you should upgrade Docker using your package manager directly. There’s no advantage to re-running the convenience script. Re-running it can cause issues if it attempts to re-install repositories which already exist on the host machine.
 
-
 ## Uninstall Docker Engine
 
     Uninstall the Docker Engine, CLI, containerd, and Docker Compose packages:
@@ -218,11 +213,10 @@ If you installed Docker using the convenience script, you should upgrade Docker 
 
 Images, containers, volumes, or custom configuration files on your host aren’t automatically removed. To delete all images, containers, and volumes:
 
->     $ sudo rm -rf /var/lib/docker
->     $ sudo rm -rf /var/lib/containerd
+> $ sudo rm -rf /var/lib/docker
+> $ sudo rm -rf /var/lib/containerd
 
 You have to delete any edited configuration files manually.
-
 
 ## Next steps
 
