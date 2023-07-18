@@ -2,7 +2,7 @@
 <br>
 Olá a todos!
 
-Gostaria de compartilhar com vocês o meu projeto "app_docker", que também é conhecido como "shadowruge/flsck_pages" no DockerHub. [link](https://hub.docker.com/repository/docker/shadowruge/flask_pages/general)
+Gostaria de compartilhar com vocês o meu projeto "app_docker", que também é conhecido como "shadowruge/flack_pages" no DockerHub. [link](https://hub.docker.com/repository/docker/shadowruge/flask_pages/general)
 
  Trata-se de uma imagem Docker altamente versátil e eficiente, projetada para simplificar o processo de desenvolvimento e implantação de aplicações Flask.
 
